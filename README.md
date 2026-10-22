@@ -1,21 +1,24 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# ASTRA QUANT X
 
-# Run and deploy your AI Studio app
+## Run locally
 
-This contains everything you need to run your app locally.
+Requires Node.js 20.19 or newer (or 22.12 or newer).
 
-View your app in AI Studio: https://ai.studio/apps/e1f644ef-9ae1-4a20-b451-825bea029884
+```sh
+npm ci
+npm run dev
+```
 
-## Run Locally
+## Deploy to Vercel
 
-**Prerequisites:**  Node.js
+Import the repository into Vercel and deploy from the project root. The included
+`vercel.json` configures Vite, runs `npm run build`, and serves the generated
+`dist` directory. No environment variables are required for the current app.
 
+To verify a production build locally:
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
-"# astra" 
+```sh
+npm ci
+npm run build
+npm run preview
+```
